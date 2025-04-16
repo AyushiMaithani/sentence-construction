@@ -22,7 +22,7 @@ const useQuestions = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_BASE_URL;
+        const baseUrl = "https://sentence-construction-jkb4.onrender.com";
         const response = await fetch(`${baseUrl}/data`);
         if (!response.ok) throw new Error("Failed to fetch questions");
         const data: TestData = await response.json();
